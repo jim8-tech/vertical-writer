@@ -13,6 +13,34 @@
     line-height: 2em
 }
 
+.vertical-pages {
+    font-family: 'MS Mincho', 'SimSong', serif;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 0.5em;
+  }
+  
+  .vertical-page {
+    height: 100vh;
+    width: 100%;
+    page-break-after: always;
+    border-right: 1px solid #ccc;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+  
+  .editor {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  @media print {
+    .vertical-page {
+      height: auto;
+      page-break-after: always;
+    }
+  }
+
 .editor,.editor .ProseMirror {
     display: block;
     width: 100%;
